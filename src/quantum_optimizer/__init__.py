@@ -11,9 +11,11 @@ from .decomposition import Decomposer
 from .routing import SABRERouter
 from .metrics import CircuitMetrics, compare_circuits, calculate_estimated_fidelity
 from .qasm_export import QASMExporter
+from .transpile import transpile_circuit
 
 __version__ = "0.1.0"
 __all__ = [
+    "transpile_circuit",
     "QuantumOptimizer",
     "DAGAnalyzer",
     "Decomposer",
