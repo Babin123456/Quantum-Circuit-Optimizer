@@ -96,27 +96,35 @@ print(f"Gate count reduction: {metrics['gate_reduction_pct']}%")
 The repository includes ready-to-run educational scripts in `examples/`:
 
 ### Example 1: Basic Optimization & Gate Cancellation
+
 ```bash
 python examples/01_basic_optimization.py
 ```
+
 *Demonstrates single-qubit gate cancellation, 2-qubit CX cancellation, and multi-level comparison.*
 
 ### Example 2: Toffoli Gate Decomposition
+
 ```bash
 python examples/02_toffoli_decomposition.py
 ```
+
 *Recreates canonical 6-CX Toffoli decomposition, removes adjacent redundant rotations, and computes statevector fidelity.*
 
 ### Example 3: Hardware Topology & SABRE Routing
+
 ```bash
 python examples/03_sabre_hardware_routing.py
 ```
+
 *Maps an unconstrained circuit onto a 5-qubit 1D linear chain coupling map using SABRE heuristic SWAP insertion.*
 
 ### Example 4: OpenQASM 2.0, 3.0 & QUAM Export
+
 ```bash
 python examples/04_qasm_export.py
 ```
+
 *Exports optimized circuits to standard OpenQASM files and generates a Quantum Machines QUAM configuration skeleton.*
 
 ---
