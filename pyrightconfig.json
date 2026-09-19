@@ -1,0 +1,26 @@
+{
+  "include": [
+    "src",
+    "examples",
+    "tests"
+  ],
+  "extraPaths": [
+    "src"
+  ],
+  "venvPath": "d:\\Projects\\Quantum-Circuit-Optimizer",
+  "venv": ".venv",
+  "executionEnvironments": [
+    {
+      "root": "src",
+      "extraPaths": ["src"]
+    },
+    {
+      "root": "examples",
+      "extraPaths": ["src"]
+    },
+    {
+      "root": "tests",
+      "extraPaths": ["src"]
+    }
+  ]
+}

@@ -148,7 +148,7 @@ def transpile_circuit(
     if coupling_map is None:
         # Default to 1D linear chain: 0 <-> 1 <-> 2 <-> ...
         coupling_edges = [[i, i + 1] for i in range(num_qubits - 1)] + [[i + 1, i] for i in range(num_qubits - 1)]
-    elif isinstance(coupling_map, CouplingMap):
+    elif hasattr(coupling_map, "get_edges"):
         coupling_edges = [list(e) for e in coupling_map.get_edges()]
     else:
         coupling_edges = [list(e) for e in coupling_map]
