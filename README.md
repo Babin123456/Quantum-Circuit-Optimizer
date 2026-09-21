@@ -42,17 +42,20 @@ git clone https://github.com/Babin123456/Quantum-Circuit-Optimizer.git
 cd Quantum-Circuit-Optimizer
 ```
 
-### Step 2: Create a Clean Python 3.12 Virtual Environment
+### Step 2: Create a Clean Python 3.11 or 3.12 Virtual Environment
 
-Quantum computing packages like Qiskit 2.x and NumPy are compiled for Python 3.10 through 3.12. Using `uv` (recommended) guarantees a clean, isolated environment:
+Quantum computing packages like Qiskit 2.x, Qiskit Aer, and NumPy require Python 3.10 to 3.12 (Python 3.14 does not yet support all pre-compiled binary C-extensions). Using `uv` guarantees a clean, isolated environment with compatible C-extensions:
 
 ```bash
-# Using uv (fastest & recommended)
-uv venv --python 3.12 .venv
+# Using uv (recommended)
+uv venv .venv --python 3.11
+
+# Or with Python 3.12:
+# uv venv .venv --python 3.12
 
 # Activate environment:
 # On Windows PowerShell:
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 # On Linux / macOS:
 source .venv/bin/activate
 ```
@@ -60,8 +63,13 @@ source .venv/bin/activate
 ### Step 3: Install Dependencies and Local Package
 
 ```bash
+# Using uv:
 uv pip install -r requirements.txt
-uv pip install -e .
+uv pip install -e ".[dev]"
+
+# Or using standard pip once activated:
+pip install -r requirements.txt
+pip install -e ".[dev]"
 ```
 
 ---
